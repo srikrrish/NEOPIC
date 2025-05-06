@@ -1,0 +1,5 @@
+*.pyc
+*.pt
+*.png
+_Data/*
+*.txt
