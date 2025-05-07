@@ -66,5 +66,29 @@ or in supercomputers interactive node
 ```
 srun --ntasks=1 --gres=gpu:1 python3 train.py
 ```
+### Installation from existing modules
 
+In many supercomputers most of the packages needed are already available as modules and they are also installed in a way that is optimized
+for the supercomputer. Hence in those cases it may be better to use them and install only the packages which are not available using `pip`
+and python virtual environments. 
 
+Here we follow the template from https://gitlab.jsc.fz-juelich.de/kesselheim1/sc_venv_template for creating python virtual environments in 
+an efficient and reproducible manner. For our current installation we use the following `modules.sh` for JSC's supercomputers
+
+```
+module purge
+module load Stages/2025
+module load GCC OpenMPI
+module load Python
+module load PyTorch
+module load torchvision
+module load torchaudio
+module load h5py
+```
+and the following `requirements.txt` 
+
+```
+pip
+einops
+```
+Then we follow the steps in https://gitlab.jsc.fz-juelich.de/kesselheim1/sc_venv_template, activate and use the environment. 
