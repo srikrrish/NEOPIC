@@ -1,0 +1,28 @@
+name: dse
+channels:
+  - conda-forge
+dependencies:
+  - ffmpeg
+  - gmpy2
+  - jinja2
+  - python
+  - pytorch
+  - sympy
+  - torchaudio
+  - torchvision
+  - networkx
+  - pillow
+  - h5py
+  - pip
+  - pip:
+    - contourpy
+    - cycler
+    - einops
+    - kiwisolver
+    - matplotlib
+    - numpy
+    - python-dateutil
+    - scipy
+    - packaging
+    - pyparsing
+    - six

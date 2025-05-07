@@ -292,7 +292,7 @@ def train (configs):
     plt.ylabel('Log Loss')
     plt.legend()
     plt.grid()
-    plt.savefig(f"_Models/1d_1layer_physics/loss_history.png")
+    plt.savefig(f"_Models/loss_history.png")
     plt.clf()
     plt.close()
 
@@ -311,7 +311,7 @@ def train (configs):
         best_model.point_data = None
         best_model.denormalizer = None
         print(f"Experiment: {configs['experiment']} \t- Model: {configs['model']} \t- Error: {lowest_error:.4f}% \t- Time: {full_time:.4f}")
-        torch.save(best_model, f"_Models/1d_1layer_physics/{configs['experiment']}_{configs['model']}.pt")
+        torch.save(best_model, f"_Models//{configs['experiment']}_{configs['model']}.pt")
 
     return training_times, train_loss_hist, test_loss_hist, relative_error_hist, relative_median_error_hist
 
